@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.comm(@width, @config) {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    border: @width solid transparent;
+    each(@config, {
+            border-@{key}-color:@value;
+        }
+
+    )
+}
+
+.box {
+    .comm(30px, {
+            right:red
+        }
+
+    );
+}
+
+.box1 {
+    .comm(50px, {
+            right:skyblue
+        }
+
+    );
+}
+
+.box2 {
+    .comm(50px, {
+            top:red
+        }
+
+    );
+}
+
+.box3 {
+    .comm(30px, {
+            top:black
+        }
+
+    );
+}
+
+.box4 {
+    .comm(40px, {
+            left:blue
+        }
+
+    );
+}
+
+.box5 {
+    .comm(30px, {
+            left:yellow
+        }
+
+    );
+}
+
+.box6 {
+    .comm(50px, {
+            bottom:#008c8c
+        }
+
+    );
+}
+
+.box7 {
+    .comm(30px, {
+            bottom:#789112
+        }
+
+    );
+}

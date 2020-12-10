@@ -1,0 +1,1 @@
+import indexless from './index.less';
